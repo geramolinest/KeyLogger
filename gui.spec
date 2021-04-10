@@ -2,7 +2,6 @@
 
 block_cipher = None
 
-
 a = Analysis(['gui.py'],
              pathex=['/home/anon23/Descargas/RansomWare'],
              binaries=[],
