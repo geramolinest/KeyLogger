@@ -24,7 +24,7 @@ def Ventana():
     canvas = tkinter.Canvas(window,width=600,height = 600)
     canvas.grid(columnspan = 3,rowspan=3) 
     #Logo
-    logo = Image.open("/home/anon23/Descargas/WallPapers/guy-fawkes-mask.png")
+    logo = Image.open("/home/anon23/Descargas/WallPapers/")
     logo = ImageTk.PhotoImage(logo)
      #Labels
     label  = tkinter.Label(image=logo)
@@ -41,27 +41,27 @@ def Ventana():
 
 def DesEncrypt():
     try:      
-        msg.showinfo("Llave","Seleccione llave para desencriptar")
+        msg.showinfo("Key","Select your key for decrypt")
         file_key = tf.askopenfilename()
         with open(file_key,'rb') as file:
             key = file.read()
-        msg.showinfo("Directorio","Seleccione directorio a desencriptar")
+        msg.showinfo("Directorio","Select directory for decrypt")
         fileD = tf.askdirectory()
         MC.AnonNewsD(fileD,key)
-        msg.showinfo("Encriptación","Se Desencriptó el directorio")
+        msg.showinfo("Encriptación","Decrypted correctly")
     except:
-        msg.showerror("Encriptación","Error al desencriptar directorio")
+        msg.showerror("Encriptación","Error in decrypt process")
 
 def Encrypt():
     try:       
-        mensaje = "Se generó un archivo con nombre Credenciales.txt\n" + "con la ruta del directorio que encriptó"
+        mensaje = "A file with name credentials.txt\n" + " was generated "
         
         fileD = tf.askdirectory()
         MC.AnonNews(fileD)
-        msg.showinfo("Encriptación","Se encriptó el directorio")
+        msg.showinfo("Encrypt","Directory Encrypted")
         msg.showinfo("Atención",mensaje)
     except:
-        msg.showerror("Encriptación","Error al encriptar directorio")   
+        msg.showerror("Encrypt","An Error ocurred in Encrypt process")   
 
 if __name__ == '__main__':
     Ventana()
